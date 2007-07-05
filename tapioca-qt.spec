@@ -4,7 +4,7 @@
 %define oname Tapioca-Qt
 
 Name:          tapioca-qt
-Version:       0.1.0
+Version:       0.14.1
 Release:       %mkrel 1
 Summary:       High-level classes on top of TelepathyQt for use in clients
 License:       GPL
@@ -18,10 +18,13 @@ BuildRequires: qt4-devel
 BuildRequires: libtelepathy-qt-devel
 
 Provides:      TapiocaQt
+
 %description
 Tapioca-qt is a Qt4 package containing high-level classes on
 top of TelepathyQt for use in clients. It's used in at least 
 decibel and kopete experimental telepathy branch.
+
+#---------------------------------------------------------------------
 
 %package -n %lib_name
 Summary:        Headers files for %{name}
@@ -83,6 +86,11 @@ Tapioca-qt development files.
 %_includedir/QtTapioca/handlefactory.h
 %_includedir/QtTapioca/textchannel.h
 %_includedir/QtTapioca/usercontact.h
+%_includedir/QtTapioca/Stream
+%_includedir/QtTapioca/StreamChannel
+%_includedir/QtTapioca/stream.h
+%_includedir/QtTapioca/streamchannel.h
+
 %_libdir/libQtTapioca.so
 %_libdir/pkgconfig/QtTapioca.pc
 
@@ -91,10 +99,9 @@ Tapioca-qt development files.
 %prep
 
 %setup -q -n %name 
-%patch0 -p1 -b .fix_x86_64
+#%patch0 -p1 -b .fix_x86_64
 %build
 
-export QTDIR=/usr/lib/qt4/
 
 cmake -DCMAKE_INSTALL_PREFIX=%{_prefix} \
         %if "%{_lib}" != "lib"
