@@ -9,6 +9,7 @@ License: GPL
 Group: Networking/Instant messaging
 Url: http://telepathy.freedesktop.org/wiki/TapiocaQt
 Source: %name-%version.%revision.tar.bz2 
+BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: cmake
 BuildRequires: qt4-devel
 BuildRequires: telepathy-qt-devel
