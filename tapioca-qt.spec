@@ -31,8 +31,12 @@ Obsoletes: %{_lib}tapioca-qt0
 %description -n %libQtTapioca
 %name core library.
 
+%if %mdkversion < 200900
 %post -n %libQtTapioca -p /sbin/ldconfig
+%endif
+%if %mdkversion < 200900
 %postun -n %libQtTapioca -p /sbin/ldconfig
+%endif
 
 %files -n %libQtTapioca
 %defattr(-,root,root)
