@@ -1,8 +1,8 @@
-%define revision 2031
+%define revision 829319
 
 Name: tapioca-qt
-Version: 0.14.1
-Release: %mkrel 0.%revision.2
+Version: 0.17.7
+Release: %mkrel 0.%revision.1
 Epoch: 1
 Summary: High-level classes on top of TelepathyQt for use in clients
 License: GPL
@@ -64,7 +64,6 @@ Tapioca-qt development files.
 
 %prep
 %setup -q 
-
 %build
 %cmake_qt4
 
