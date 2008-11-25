@@ -1,4 +1,4 @@
-%define revision 829319
+%define revision 882598
 
 Name: tapioca-qt
 Version: 0.17.7
@@ -63,7 +63,8 @@ Tapioca-qt development files.
 #--------------------------------------------------------------------
 
 %prep
-%setup -q 
+%setup -q -n %name
+
 %build
 %cmake_qt4
 
