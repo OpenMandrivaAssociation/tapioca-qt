@@ -7,7 +7,7 @@ Epoch: 1
 Summary: High-level classes on top of TelepathyQt for use in clients
 License: GPL
 Group: Networking/Instant messaging
-Url: http://telepathy.freedesktop.org/wiki/TapiocaQt
+Url: https://telepathy.freedesktop.org/wiki/TapiocaQt
 Source: %name-%version.%revision.tar.bz2 
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: cmake
